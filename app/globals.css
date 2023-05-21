@@ -19,18 +19,3 @@ body {
 body {
   background: var(--background-color);
 }
-
-nav {
-  position: fixed;
-  width: 13%;
-  height: 100vh;
-  left: 0px;
-  top: 0px;
-  color: white;
-  background-color: #091928;
-}
-
-a {
-  text-decoration: none;
-  color: white;
-}

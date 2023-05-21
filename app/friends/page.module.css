@@ -1,0 +1,145 @@
+.content {
+  position: relative;
+  width: 87%;
+  height: 92.5vh;
+  left: 13%;
+  top: 7.5vh;
+}
+
+.filter_menu {
+  display: flex;
+  justify-content: left;
+  margin-top: 46px;
+}
+
+.menu_wrapper {
+  /* position: relative; */
+  /* display: inline-block; */
+  height: 37px;
+  width: 59px;
+  margin-left: 18.5%;
+  left: 18.5%;
+  border: 1px solid #ABABAB;
+  border-radius: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+.icon_wrapper {
+  position: relative;
+  top: calc(50% - 10px);
+}
+
+.menu_wrapper:hover {
+  cursor: pointer;
+  background-color: #424242;
+  color: white
+}
+
+.main {
+  width: 100%;
+  position: relative;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 26px;
+  line-height: 31px;
+  color: #000000;
+}
+
+
+.friend_container {
+  color: black;
+  width: 63%;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 15px;
+  justify-content: center;
+  margin-bottom: 4px;
+}
+
+.friend_row {
+  display: grid;
+  grid-template-rows: auto auto;
+  background: #FFFFFF;
+  border: 1px solid #D7D7D7;
+  border-radius: 6px;
+  justify-content: left;
+  padding: 32px;
+  width: 100%;
+
+  margin-top: 20px;
+}
+
+.friend_row>div {
+  display: flex;
+  justify-content: left;
+}
+
+#name {
+  color: #000000;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+}
+
+#super_close {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 3px 7px;
+
+  /* width: 117px; */
+  height: 21px;
+  white-space: nowrap;
+
+  /* Theme_light */
+  background: #DCFFE6;
+  border-radius: 21px;
+
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 15px;
+  color: #19B444;
+
+  margin-left: 10px;
+}
+
+#close {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 3px 7px;
+
+  height: 21px;
+  white-space: nowrap;
+
+  /* Theme_light */
+  background: #DFEFFF;
+  border-radius: 21px;
+
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 15px;
+  color: #3399FF;
+
+  margin-left: 10px;
+}
+
+#small {
+  color: #ABABAB;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  margin-top: 10px;
+}
