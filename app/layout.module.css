@@ -27,5 +27,17 @@
 }
 
 .site_title {
-  margin: ;
+  margin: 3% auto 4% 10%;
+  /* margin: 31px auto 4% 10%; */
+}
+
+.site_title>span {
+  margin-left: 4%;
+}
+
+.icon_wrapper {
+  position: relative;
+  display: inline-block;
+  height: 18px;
+  width: 18px;
 }

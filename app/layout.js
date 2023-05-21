@@ -26,28 +26,40 @@ export function SideMenu() {
   return (
     <nav>
       <div className={styles.site_title}>
-        <Image
-          src="/images/Clerkie.png"
-          alt="Home Icon"
-          height={24}
-          width={24}
-        />
+        <div className={styles.icon_wrapper}>
+          <Image
+            src="/images/Clerkie.png"
+            alt="Home Icon"
+            // height={22}
+            // width={22}
+            fill={true}
+          />
+        </div>
         <span>Clerkie Challenge</span>
       </div>
-      <Link href="/">
-        <Image src="/images/Home.png" alt="Home Icon" height={24} width={24} />
-        <span>Home</span>
-      </Link>
+      <div className={styles.menuRow1}>
+        <Link href="/">
+          <Image
+            src="/images/Home.png"
+            alt="Home Icon"
+            height={24}
+            width={24}
+          />
+          <span>Home</span>
+        </Link>
+      </div>
       <br />
-      <Link href="/friends">
-        <Image
-          src="/images/Friends.png"
-          alt="Home Icon"
-          height={24}
-          width={24}
-        />
-        <span>Friends</span>
-      </Link>
+      <div className={styles.menuRow1}>
+        <Link href="/friends">
+          <Image
+            src="/images/Friends.png"
+            alt="Home Icon"
+            height={24}
+            width={24}
+          />
+          <span>Friends</span>
+        </Link>
+      </div>
     </nav>
   );
 }
