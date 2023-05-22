@@ -11,10 +11,6 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
-  // let { data } = getFriendsData();
-
-  // console.log(data);
-
   return (
     <html lang="en">
       <body className={inter.className}>

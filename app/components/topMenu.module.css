@@ -1,7 +1,7 @@
 .topMenu {
   width: 87%;
   height: 7.5%;
-  position: absolute;
+  position: relative;
   display: flex;
   align-items: center;
   left: 13%;

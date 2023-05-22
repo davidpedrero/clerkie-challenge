@@ -2,13 +2,14 @@
 import styles from "./filterMenu.module.css";
 import { useState, useEffect } from "react";
 import { TfiMenuAlt } from "react-icons/tfi";
-import getFriendsData from "../data/data";
+import Link from "next/link";
 
 export default function FilterMenu() {
   const [toggle, setToggle] = useState(false);
   const [count, setCount] = useState(0);
   const [close, setClose] = useState(false);
   const [superClose, setSuperClose] = useState(false);
+  const [filters, setFilters] = useState([]);
 
   useEffect(() => {
     let i = close && superClose ? 2 : close || superClose ? 1 : 0;
@@ -16,38 +17,24 @@ export default function FilterMenu() {
     setCount(i);
   }, [close, superClose]);
 
-  function handleToggle() {
-    setToggle(!toggle);
-  }
-
-  function HandleFilter() {
-    let filterArray = [];
+  useEffect(() => {
+    let array = [];
 
     if (close) {
-      filterArray.push("Close Friends");
+      array.push("Close Friends");
     }
     if (superClose) {
-      filterArray.push("Super Close Friends");
+      array.push("Super Close Friends");
     }
     if (!(close || superClose)) {
-      filterArray.push("Default");
+      array.push("Default");
     }
 
-    console.log(filterArray);
+    setFilters(array);
+  }, [close, superClose]);
 
-    let { data } = getFriendsData();
-
-    let filterData = [];
-
-    data.forEach((x) => {
-      if (filterArray.indexOf(x.status) != -1) {
-        filterData.push(x);
-      }
-    });
-
-    console.log(filterData);
-
-    return filterData;
+  function handleToggle() {
+    setToggle(!toggle);
   }
 
   return (
@@ -96,9 +83,9 @@ export default function FilterMenu() {
                 </tr>
               </tbody>
             </table>
-            <button type="button" onClick={HandleFilter}>
-              Apply
-            </button>
+            <Link href={`/friends/${filters}`}>
+              <button type="button">Apply</button>
+            </Link>
           </form>
         </div>
       </div>
