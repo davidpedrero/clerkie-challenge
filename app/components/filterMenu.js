@@ -90,54 +90,10 @@ export default function FilterMenu() {
                 ></input>
               </div>
             </div>
-
-            {/* <div className={styles.checkbox_row}>
-              <p>
-                Close Friends{" "}
-                <input
-                  type="checkbox"
-                  value="Close Friends"
-                  onChange={(e) => setClose(!close)}
-                ></input>{" "}
-              </p>
-            </div>
-            <div className={styles.checkbox_row}>
-              <p>
-                Super Close Friends
-                <input
-                  type="checkbox"
-                  value="Super Close Friends"
-                  onChange={(e) => setSuperClose(!superClose)}
-                ></input>
-              </p>
-            </div> */}
-
-            {/* <table>
-              <tbody>
-                <tr>
-                  <td>Close Friends</td>
-                  <td>
-                    <input
-                      type="checkbox"
-                      value="Close Friends"
-                      onChange={(e) => setClose(!close)}
-                    ></input>
-                  </td>
-                </tr>
-                <tr>
-                  <td>Super Close Friends</td>
-                  <td>
-                    <input
-                      type="checkbox"
-                      value="Super Close Friends"
-                      onChange={(e) => setSuperClose(!superClose)}
-                    ></input>
-                  </td>
-                </tr>
-              </tbody>
-            </table> */}
-
-            <Link href={`/friends/${filters}`}>
+            <Link
+              href={`/friends/${filters}`}
+              style={{ textDecoration: "none" }}
+            >
               <button className={styles.apply_button} type="button">
                 Apply
               </button>
