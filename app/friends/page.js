@@ -28,9 +28,9 @@ export default function Friends() {
         <main className={styles.main}>
           <div className={styles.toggle_menu}></div>
           <div className={styles.friend_container}>
-            {data.map(({ name, status, email, number }) =>
+            {data.map(({ id, name, status, email, number }) =>
               status == "Super Close Friends" ? (
-                <div className={styles.friend_row}>
+                <div className={styles.friend_row} id={id}>
                   <div>
                     <span id={styles.name}>{name}</span>
                     <span id={styles.super_close}>{status}</span>
@@ -42,7 +42,7 @@ export default function Friends() {
                   </div>
                 </div>
               ) : status == "Close Friends" ? (
-                <div className={styles.friend_row}>
+                <div className={styles.friend_row} id={id}>
                   <div>
                     <span id={styles.name}>{name}</span>
                     <span id={styles.close}>{status}</span>
@@ -54,7 +54,7 @@ export default function Friends() {
                   </div>
                 </div>
               ) : (
-                <div className={styles.friend_row}>
+                <div className={styles.friend_row} id={id}>
                   <div>
                     <span id={styles.name}>{name}</span>
                     <span></span>
