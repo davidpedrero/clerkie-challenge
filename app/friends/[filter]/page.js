@@ -14,7 +14,7 @@ export default function Page({ params }) {
     parsedFilter.push(str);
   });
 
-  console.log(parsedFilter);
+  // console.log(parsedFilter);
 
   let { data } = getFriendsData();
 
@@ -26,7 +26,7 @@ export default function Page({ params }) {
     }
   });
 
-  console.log(filterData);
+  // console.log(filterData);
 
   let pageName = "Friends";
 

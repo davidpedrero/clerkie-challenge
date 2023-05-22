@@ -17,7 +17,8 @@
   background-color: #FFFFFF;
 }
 
-.button_wrapper:hover {
+.button_wrapper:hover,
+#count:hover {
   cursor: pointer;
   background-color: #424242;
   color: white
@@ -26,6 +27,27 @@
 .icon_wrapper {
   position: relative;
   top: calc(50% - 10px);
+}
+
+#count {
+  font-size: 20px;
+  position: relative;
+  margin-left: 4px;
+  align-self: center;
+}
+
+.vertical_line {
+  width: 0px;
+  height: 28px;
+  border: 1px solid #ABABAB;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+.clearAll {
+  font-size: 14px;
+  color: #3399FF;
+  align-self: center;
 }
 
 .filter_menu {
@@ -55,8 +77,9 @@
 
 .head>div:nth-child(1) {
   justify-content: left;
-  margin-left: 25px;
+  margin-left: 16px;
   font-size: 14px;
+  color: #3399FF;
 }
 
 .head>div:nth-child(2) {
@@ -73,11 +96,73 @@
   font-size: 17px;
 }
 
-.head>div:nth-child(3)>div:hover {
+.head>div:nth-child(3)>div:hover,
+.head>div:nth-child(1):hover,
+.clearAll {
   cursor: pointer;
 }
 
 .form_container {
   height: 80%;
   width: 100%;
+}
+
+#form {
+  height: 100%;
+}
+
+.small_text {
+  padding-top: 25px;
+  font-size: 14px;
+  line-height: 17px;
+  display: flex;
+  align-items: center;
+  color: #686868;
+  margin-left: 25px;
+}
+
+.checkbox_row {
+  margin-top: 25px;
+  display: flex;
+}
+
+.checkbox_row>span {
+  margin-left: 25px;
+}
+
+.checkbox_row>input {
+  display: flex;
+  position: relative;
+  margin-left: auto;
+  margin-right: 25px;
+  height: 20px;
+  width: 20px;
+}
+
+.apply_button {
+  margin-top: 35px;
+  padding: 13px 137px;
+  background: #424242;
+  border-radius: 6px;
+  justify-content: center;
+  width: calc(100% - 20px);
+  margin-left: 10px;
+
+  font-size: 16px;
+  line-height: 19px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+
+  color: #FFFFFF;
+}
+
+.apply_button:hover {
+  cursor: pointer;
+  background-color: black;
+}
+
+.form_grid {
+  display: grid;
+  grid-template-columns: 1fr;
 }
