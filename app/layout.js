@@ -1,7 +1,6 @@
 import "./globals.css";
 import { Inter } from "next/font/google";
 import styles from "./layout.module.css";
-// import getFriendsData from "./data/data";
 
 const inter = Inter({ subsets: ["latin"] });
 

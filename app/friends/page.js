@@ -2,29 +2,19 @@ import styles from "./page.module.css";
 import TopMenu from "../components/topMenu";
 import SideMenu from "../components/sideMenu";
 import getFriendsData from "../data/data";
-import Image from "next/image";
-import { TfiMenuAlt } from "react-icons/tfi";
-// import { stat } from "selenium-webdriver/io";
+import FilterMenu from "../components/filterMenu";
 
 export default function Friends() {
   const pageName = "Friends";
 
   let { data } = getFriendsData();
 
-  // console.log(data);
-
   return (
     <>
       <TopMenu pageName={pageName} />
       <SideMenu />
       <div className={styles.content}>
-        <div className={styles.filter_menu}>
-          <div className={styles.menu_wrapper}>
-            <div className={styles.icon_wrapper}>
-              <TfiMenuAlt size={20} />
-            </div>
-          </div>
-        </div>
+        <FilterMenu />
         <main className={styles.main}>
           <div className={styles.toggle_menu}></div>
           <div className={styles.friend_container}>
